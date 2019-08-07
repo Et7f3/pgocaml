@@ -32,5 +32,6 @@ depends: [
   "ocaml-migrate-parsetree"
   "ppx_tools_versioned"
   "odoc"
+  "batteries"
 ]
 flags: light-uninstall
