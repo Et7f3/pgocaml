@@ -582,7 +582,7 @@ let list_of_string_args mapper args =
   else
     List.map (function Some x -> x | None -> assert false) maybe_strs
 
-let pgocaml_mapper _argv =
+let pgocaml_mapper _ _argv =
   { default_mapper with
     expr = fun mapper expr ->
       let unsupported loc =
@@ -634,6 +634,7 @@ let migration =
   Migrate_parsetree.(Versions.migrate Versions.ocaml_404 Versions.ocaml_current)
 
 let _ =
-  Migrate_parsetree.Compiler_libs.Ast_mapper.register
-    "pgocaml"
-    (fun args -> migration.copy_mapper (pgocaml_mapper args))
+  Migrate_parsetree.Driver.register
+    ~name:"pgocaml"
+    (module Migrate_parsetree.OCaml_404)
+    pgocaml_mapper
