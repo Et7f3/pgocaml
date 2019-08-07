@@ -5,7 +5,6 @@
   (preprocess
     (pps ppx_tools_versioned.metaquot_404))
   (libraries
-    base
     ppx_tools
     rresult
     ppx_tools_versioned.metaquot_404
