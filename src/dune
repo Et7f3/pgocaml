@@ -9,4 +9,4 @@
   (targets PGOCaml_config.ml)
   (deps PGOCaml_config.ml.in genconfig.sh)
   (action
-    (with-stdout-to PGOCaml_config.ml (run bash ./genconfig.sh))))
+    (with-stdout-to PGOCaml_config.ml (run bash ../../../src/genconfig.sh))))
