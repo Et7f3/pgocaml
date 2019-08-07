@@ -17,6 +17,7 @@
  * Boston, MA 02111-1307, USA.
  *)
 
+open PGOCaml_aux
 open Printf
 
 open Migrate_parsetree.OCaml_404.Ast.Ast_mapper
@@ -24,8 +25,6 @@ open Migrate_parsetree.OCaml_404.Ast.Ast_helper
 open Migrate_parsetree.OCaml_404.Ast.Asttypes
 open Migrate_parsetree.OCaml_404.Ast.Parsetree
 open Migrate_parsetree.OCaml_404.Ast.Longident
-
-module String = BatString
 
 let nullable_name = "nullable"
 let unravel_name = "unravel"
