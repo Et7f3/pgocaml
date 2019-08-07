@@ -8,7 +8,6 @@
     ppx_tools
     rresult
     ppx_tools_versioned.metaquot_404
-    batteries
     ocaml-migrate-parsetree
     pgocaml)
   (modules Ppx_pgsql))
